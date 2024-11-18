@@ -1,0 +1,79 @@
+{
+  "channel_defaults": {
+    "on_demand": true
+  },
+  "server": {
+    "debug": true,
+    "http_debug": false,
+    "http_demo": true,
+    "http_dir": "",
+    "http_login": "demo",
+    "http_password": "demo",
+    "http_port": ":8083",
+    "https": false,
+    "https_auto_tls": false,
+    "https_auto_tls_name": "",
+    "https_cert": "",
+    "https_key": "",
+    "https_port": "",
+    "ice_credential": "",
+    "ice_servers": [
+      "stun:stun.l.google.com:19302"
+    ],
+    "ice_username": "",
+    "log_level": "info",
+    "rtsp_port": ":5541",
+    "token": {
+      "backend": "",
+      "enable": false
+    },
+    "webrtc_port_max": 0,
+    "webrtc_port_min": 0
+  },
+  "streams": {
+    "demo1": {
+      "channels": {
+        "0": {
+          "audio": true,
+          "name": "FD836B | Technical01",
+          "on_demand": true,
+          "url": "rtsp://root:Ax0nesys!@192.168.20.100:554/live.sdp"
+        }
+      },
+      "name": "FD836B | Technical01"
+    },
+    "demo2": {
+      "channels": {
+        "0": {
+          "audio": true,
+          "name": "DS-2TD1217B | Normal vision",
+          "on_demand": true,
+          "url": "rtsp://root:Ax0nesys!@192.168.20.116:554/live.sdp"
+        }
+      },
+      "name": "DS-2TD1217B | Normal vision"
+    },
+    "demo3": {
+      "channels": {
+        "0": {
+          "audio": true,
+          "name": "FD836B | Corridor01",
+          "on_demand": true,
+          "url": "rtsp://root:Ax0nesys!@192.168.20.107:554/live.sdp"
+        }
+      },
+      "name": "FD836B | Corridor01"
+    },
+    "demo4": {
+      "channels": {
+        "0": {
+          "audio": true,
+          "name": "FD836BA | Corridor02",
+          "on_demand": true,
+          "url": "rtsp://root:Ax0nesys!@192.168.20.103:554/live.sdp"
+        }
+      },
+      "name": "FD836BA | Corridor02"
+    }
+  }
+}

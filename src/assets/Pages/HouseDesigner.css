@@ -1,0 +1,36 @@
+/* HouseDesigner.css */
+
+.house-designer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .controls {
+    margin-bottom: 20px;
+  }
+  
+  .controls input,
+  .controls select,
+  .controls button {
+    margin: 10px;
+  }
+  
+  .canvas-container {
+    position: relative;
+    width: 1000px;  /* Increase canvas width */
+    height: 800px;  /* Increase canvas height */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    overflow: auto;
+  }
+  
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+  

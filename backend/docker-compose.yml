@@ -1,0 +1,44 @@
+version: '3'
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo_database
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - app_network
+
+  rtsp-to-web:
+    build:
+      context: ./RTSPtoWeb  # Path to the directory containing your Dockerfile
+    container_name: rtsp_to_web
+    ports:
+      - "8083:8083"
+    volumes:
+      - ./RTSPtoWeb/config.json:/config/config.json  # Correct path to config.json
+    command: ["./rtsp-to-web", "--config=/config/config.json"]
+    networks:
+      - app_network
+
+  react-planner:
+    build:
+      context: ./react-planner  # Path to the react-planner directory
+    container_name: react_planner
+    ports:
+      - "8087:8087"
+    environment:
+      - NODE_OPTIONS=--openssl-legacy-provider  # Set the environment variable for OpenSSL
+    command: ["npm", "run", "start"]  # Ensure "start" is valid in your package.json
+    networks:
+      - app_network
+
+# Named volume to persist MongoDB data
+volumes:
+  mongo_data:
+
+# Optionally, you can define custom networks if needed
+networks:
+  app_network:
+    driver: bridge

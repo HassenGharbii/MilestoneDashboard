@@ -1,0 +1,25 @@
+/* styles.css */
+.icon-traffic-spend {
+    background: url('/path/to/traffic-spend-icon.png') no-repeat center center;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .icon-visitors-count {
+    background: url('/path/to/visitors-count-icon.png') no-repeat center center;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .icon-occupancy-rate {
+    background: url('/path/to/occupancy-rate-icon.png') no-repeat center center;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .icon-visitors-spends {
+    background: url('/path/to/visitors-spends-icon.png') no-repeat center center;
+    width: 24px;
+    height: 24px;
+  }
+  
